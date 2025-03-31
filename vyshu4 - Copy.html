@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: center;
+        }
+        .vp{
+            background-color: cadetblue;
+         justify-content: center ;
+         border-radius: 40px;
+         box-sizing: content-box;
+         shape-margin: inherit;
+         text-align: center;
+         flex-direction: column;
+         padding: 30px;
+         height: 200px;
+         width: 200px;
+         border-color: black;
+         background-origin: padding-box;
+         position:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="vp">
+    <center><form action="">
+        <input type="email" placeholder="Enter Email" required><br><br>
+        <input type="password" placeholder="Enter Password" required><br><br>
+        <button>Submit</button>
+    </div>
+    </form></center>
+    <script>
+        function valid(){
+        let email=document.getElementById("in1").value
+        let pass=document.getElementById("in2").value
+
+        if(!(email.inlude("@"))){
+            alert("Enter the proper Email")
+            document.getElementById("in1").value=""
+        }
+        if(pass.length<8)
+        {
+            alert("Password should be 8 Characters long")
+        }
+        let special=/[!@#$%^&*?]/
+        if(!(special.test(pass)))
+        {
+            alert("Password must contain atleast one special character")
+        }
+    }
+    </script>
+</body>
+</html>
