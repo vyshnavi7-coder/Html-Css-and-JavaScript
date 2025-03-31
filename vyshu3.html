@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #in{
+            background-color: aqua;
+        }
+        #count{
+            background-color: blue;
+        }
+       .box{
+         background-color: cadetblue;
+         justify-content: center ;
+         border-radius: 40px;
+         box-sizing: content-box;
+         shape-margin: inherit;
+         text-align: center;
+         flex-direction: column;
+         padding: 30px;
+         height: 200px;
+         width: 200px;
+         border-color: black;
+         background-origin: padding-box;
+}
+
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>Count Down</h1>
+    <h1 id="count"></h1>
+   
+   <input type="text" placeholder="number"  id="in"><br>
+   <h5>Here you go</h5>
+   <button onclick="my()">Click</button>
+    </div>
+</body>
+<script> 
+    function my()
+    {
+       let num=document.getElementById("in").value
+        
+        function run(){
+            if(num==0){
+                 clearInterval(time)
+            }
+            document.getElementById("count").innerHTML=num
+            num--
+        }
+        {
+            let nu=document.getElementById("count")
+            nu.innerHTML=name
+            nu.style.backgroundColor="cyan"
+            nu.style.width="60px"
+            nu.style.height="60px"
+                }
+        document.getElementById("in").value=""
+        let time=setInterval(run,1000)
+    }
+</script>
+</html>
